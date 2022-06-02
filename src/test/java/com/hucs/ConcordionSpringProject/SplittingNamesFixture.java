@@ -1,19 +1,14 @@
 package com.hucs.ConcordionSpringProject;
 
+import com.hucs.ConcordionSpringProject.entity.Result;
+
 public class SplittingNamesFixture extends DefaultFixture{
 
     public Result split(String fullName) {
-        Result result = new Result();
-        String[] words = fullName.split(" ");
-        result.firstName = words[0];
-        result.lastName = words[1];
+        Result result = restTemplate.getForObject("http://localhost:8080/splitNames?fullName="+fullName, Result.class);
         return result;
     }
 
-    class Result {
-        public String firstName;
-        public String lastName;
-    }
 
 }
 

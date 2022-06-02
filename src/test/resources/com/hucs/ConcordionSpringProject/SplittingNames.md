@@ -10,3 +10,8 @@ around whitespace.
 
 The full name [Jane Smith](- "#name") is [broken](- "#result = split(#name)")
 into first name [Jane](- "?=#result.firstName") and last name [Smith](- "?=#result.lastName").
+
+### Example 2
+
+The full name [Tiago S. Hucs](- "#name") is [broken](- "#result = split(#name)")
+into first name [Tiago](- "?=#result.firstName") and last name [Hucs](- "?=#result.lastName").
